@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="sideBar.js"></script>
+    <link href="./Mainstyles.css" rel="stylesheet">
+        <link rel="stylesheet" href="./cards.css">
+        <link rel="stylesheet" href="./ticketstyle.css">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="bgShadow"></div>
+            <div class="innerSidebar">
+                <div class="close">
+                    <img class="closeimg" src="closeImg.png" alt="closeImage">
+                </div>
+                <div class="profileInfo">
+                    <div id="profileImg">
+                        <img src="flowers.jpg" alt="profileImage">
+                    </div>
+                    <div class="profileData">
+                        <div class="name">Lisa Barbra</div>
+                        <div class="role">Admin</div>
+                        <div class="btn">
+                            <input type="file" id="fileInput">
+                            <label for="fileInput" id="uploadbtn">Update Profile Picture</label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="sidebarMenu">
+                    <li><a class="active" href="">
+                        <div class="icon">
+                            <img src="DashboardImg.png" alt="Dashboard Image">
+                        </div>
+                        <div class="title">Dashboard</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="./MyProjects.html">
+                        <div class="icon">
+                            <img src="projectImg.png" alt="">
+                        </div>
+                        <div class="title">Projects</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="PeopleImg.png" alt="People Image">
+                        </div>
+                        <div class="title">People</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="SettingsImg.png" alt="SettingImg">
+                        </div>
+                        <div class="title">Settings</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="HelpImg.png" alt="HelpImg">
+                        </div>
+                        <div class="title">Help</div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div class="topNav">
+                <div class="cup">
+                    <div class="innerCup">
+                        <img class="menuBarImg" src="MenuBarImg.png" alt="">
+                    </div>
+                </div>
+
+                <div class="rightBar">
+                    <ul>
+                        <li><a href="#"><img id="searchImg" src="searchImg.png" alt=""></a></li>
+                        <li><a href="login.html"><img id="signout" src="signOutImg.png" alt=""></a></li>
+                                              
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="stuff">
+                <div class="main_content">
+                    <div class="row">
+                        <div class="box">
+                            <a href="#divOne" class="button">Add Ticket</a>
+                        </div>
+                            
+                    <div class="board">
+                        <div class="board-columns">
+                            <div class="board-column" id="Ticket1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="title">
+                                    Tickets Issued
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="board-columns">
+                            <div class="board-column" id="Ticket2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="title">
+                                    In Progress
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="board-columns">
+                            <div class="board-column" id="Ticket3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="title">
+                                    Testing
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="board-columns">
+                            <div class="board-column" id="Ticket4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="title">
+                                    Resolved
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+    
+                <div class="chartheader">Ticket Statistics.</div>
+                    <div class="contain">
+                        <div class="chart1">
+                            <canvas class="myChart" id="myChart"></canvas>
+                        </div>
+                        <div class="chart2">
+                            <canvas class="pieChart" id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="footer"></div>
+            </div>
+            <div id="over">   
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="divOne">
+        <div class="lap">
+            <h2>Add Ticket</h2>
+            <a href="#" class="close">&times;</a>
+            <div class="content">
+                <div class="container">
+                    <form>
+                        <label for="">Full Name</label>
+                          <input type="text" id="FullName" placeholder="Enter your Full Name..." name="name" required>
+                          <label>Select category the issue falls under</label>
+                          <select name="issues" id="issues" required>
+                            <option value="Functional Error">Functional Error</option>
+                            <option value="Syntax Error">Syntax Error</option>
+                            <option value="Login Error">Login Error</option>
+                            <option value="Calculation Error">Calculation Error</option>
+                            <option value="Unit-Level Bug">Unit-Level Bug</option>
+                            <option value="System-level integration Bug">System-level integration Bug</option>
+                            <option value="Out of bounds bugs">Out of bounds bugs</option>
+                          </select>
+                          <label>Priority</label>
+                          <select name="priority" id="priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                          </select>
+                          <label>Description</label>
+                          <textarea id="description" placeholder="Enter description of problem here..."></textarea>
+                          <input type="button" value="submit" onclick="createTickets()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./createTicket.js"></script>
+    <script src="./viewTicket.js"></script>
+    <script src="./DragAndDrop.js"></script>
+ 
+    <script>
+        let xValues = ["April", "May", "June", "July", "August"];   
+        let yValues = [25, 49, 32, 12, 24];
+        let barColors = ["rgb(82,110,78)", "grey","rgb(82,110,78)","grey","rgb(82,110,78)"];
+        
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Issue Tickets opened in 2022"
+            }
+          }
+        });
+    </script>
+    
+    <script>
+            let xVal = ["Functional Error","Login Error","Calculation Error","Unit-Level Bug","System-level integration Bug","Out of bounds bugs"];
+            let yVal = [25, 49, 32, 12, 24, 7];
+            let bar = [
+              "grey",
+              "rgb(82,110,78)",
+              "grey",
+              "rgb(82,110,78)",
+              "grey",
+              "rgb(82,110,78)"
+            ];
+            
+            new Chart("pieChart", {
+              type: "pie",
+              data: {
+                labels: xVal,
+                datasets: [{
+                  backgroundColor: bar,
+                  data: yVal
+                }]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: "Issues resolved per category in 2022"
+                }
+              }
+            });
+    </script>
+
+    <script src="./Reanimation.js"></script>
+</html>

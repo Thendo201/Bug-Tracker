@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="SignUp.js"></script>
+</head>
+<body>
+	<div class="form">
+	<p>Sign Up</p>
+	<form>
+		<div id="fileDisplayArea">
+		
+		</div>
+		<div id="label">
+			<input type="file" id="fileInput">
+			<label for="fileInput" id="uploadbtn">Choose a file</label>	
+		</div>
+        <input type="text" name="name" id="name" placeholder="Name">
+		<input type="text" name="email" id="email" placeholder="Email">
+		<input type="text" name="username" id="username" placeholder="username">
+		<input type="password" name="password" id="password" placeholder="Password">
+		<input type="password" name="retypePassword" id="retypePassword" placeholder="Retype Password">
+
+		<button onclick="ExecuteInstructions()">Sign In</a></button>
+		<p class="message">Already have an account? <a href="login.html">Log into account</a></p>
+	</form>
+	</div>
+
+	<script>
+		function ExecuteInstructions(){
+			username = document.getElementById("username");
+
+			if (ValidateRegister(username) == "Register Successful"){
+				SaveLogin(username);
+				console.log("Hello");				
+				alert("Register Successful!");
+			}
+			else
+			{
+				alert(ValidateRegister(username));
+			}
+		}
+	</script>
+</body>
+</html>

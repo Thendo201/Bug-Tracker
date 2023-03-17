@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="login.js"></script>
+</head>
+<body>
+	<div class="form">
+	<p>Login</p>
+	<form>
+		<input type="text" name="username" placeholder="username" id = "username" >
+		<input type="password" name="password" placeholder="password" id = "password">
+		<button id="login" type="submit" onclick ="ExecuteInstructions()">Sign In</a></button>
+		<p class="message">Not registered? <a href="signUp.html">Create an account</a></p>
+	</form>
+	</div>
+		<script>
+		
+		function ExecuteInstructions(){
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			console.log(username + " One");
+			console.log(password + " Two");
+
+			if (Login(username, password) == "Login Successful!"){
+				alert("Login Successful");
+				openLink();
+			}
+			else
+			{
+				alert("Login Unsuccessful");
+			}
+		}
+		function openLink() {
+  			window.open("sideBar.html");
+		}	
+		</script> 
+</body>
+</html>

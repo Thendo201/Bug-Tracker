@@ -1,0 +1,142 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-size: cover;
+	background-color: rgb(82,110,78);
+}
+
+.form{
+	font-family: "Roboto", sans-serif;
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	opacity: 95%;
+	max-width: 260px;
+	margin: 100px auto 100px;
+	padding: 10px 45px 30px 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	border-radius: 15px;
+}
+
+.form p{
+	font-size: 25px;
+	padding: 1px;
+	text-align: center;
+}
+.form #fileDisplayArea{
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	object-fit: cover;	
+	position: relative;
+	left: 15%;
+	margin-bottom: 30px;
+	display: block;	
+	overflow: hidden;
+	background: #B3B3B3;
+}
+.form #label{
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	object-fit: cover;	
+	position: absolute;
+	left: 24%;
+	top: 91px;
+	margin-bottom: 30px;
+	display: block;	
+	overflow: hidden;
+}
+img {
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	object-fit: cover;
+	overflow: hidden;	
+}
+#fileInput {
+	display: none;
+}
+#uploadbtn{
+	width: 100%;
+	padding: 10px 0;
+	background: rgba(16, 15, 15, 0.7);
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	position: absolute;
+	top: 143px;
+	left: 0;
+	opacity: 0.8;
+}
+.form input{
+	outline: 0;
+	border-radius: 5px;
+	background: #F2F2F2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form input:hover{
+	background-color: #D3F8F9;
+	transition: all 1s ease 0s;
+}
+
+.form input:focus{
+	background-color: #D3F8F9;
+	transition: all 1s ease 0s;
+}
+
+.form button{
+	text-transform: uppercase;
+	outline: 0;
+	border-radius: 5px;
+	background: rgb(82,110,78);
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+.form button a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.form button:hover, .form button:active, .form button:focus{
+	background-color: rgb(82,110,78);
+	transition: all 1s ease 0s;
+}
+
+.form .message{
+	margin: 15px 0 0;
+	color: #B3B3B3;
+	font-size: 12px;
+}
+
+.form .message a{
+	color: #06C5CF;
+	text-decoration: none;
+}
+
+#app {
+	width:100vw;
+	height:100vh;
+	display:flex;
+}
+
+#sidebar {
+	width:30%;
+	height:100%;
+}
+
+#main-content {
+	width:100%;
+	height:100%;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Projects_Style.css"> 
+    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <html lang="en"></html>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="bgShadow"></div>
+            <div class="innerSidebar">
+                <div class="close">
+                    <img class="closeimg" src="closeImg.png" alt="closeImage">
+                </div>
+                <div class="profileInfo">
+                    <div id="profileImg">
+                        <img src="flowers.jpg" alt="profileImage">
+                    </div>
+                    <div class="profileData">
+                        <div class="name">Lisa Barbra</div>
+                        <div class="role">Admin</div>
+                        <div class="btn">
+                            <input type="file" id="fileInput">
+                            <label for="fileInput" id="uploadbtn">Update Profile Picture</label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="sidebarMenu">
+                    <li><a class="active" href="./sideBar.html">
+                        <div class="icon">
+                            <img src="DashboardImg.png" alt="Dashboard Image">
+                        </div>
+                        <div class="title">Dashboard</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="./MyProjects.html">
+                        <div class="icon">
+                            <img src="projectImg.png" alt="">
+                        </div>
+                        <div class="title">Projects</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="PeopleImg.png" alt="People Image">
+                        </div>
+                        <div class="title">People</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="SettingsImg.png" alt="SettingImg">
+                        </div>
+                        <div class="title">Settings</div>
+                    </a></li>
+                </ul>
+                <ul class="sidebarMenu">
+                    <li><a href="#">
+                        <div class="icon">
+                            <img src="HelpImg.png" alt="HelpImg">
+                        </div>
+                        <div class="title">Help</div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Top bar-->
+    <div class="mainContainer">
+        <div class="section">
+            <div class="topNav">
+                <div class="cup">
+                    <div class="innerCup">
+                        <img class="menuBarImg" src="MenuBarImg.png" alt="">
+                    </div>
+                </div>
+
+                   <div class="rightBar">
+                    <ul>
+                        <li><a href="#"><img id="searchImg" src="searchImg.png" alt=""></a></li>
+                        <li><a href="login.html"><img id="signout" src="signOutImg.png" alt=""></a></li>
+                                              
+                    </ul>
+
+                   </div>
+            </div>
+
+
+
+
+
+            <div class="table_header">
+               <h2>Project Team</h2>
+               <div>
+                <input type="text" id="Search_By_Name" placeholder="search">
+                <button class="Add_New">+Add Memeber</button>
+               </div>
+            </div>
+
+            <div class="modal-bg" >
+                <div class="modal">
+                    <div><h3>Choose Members</h3></div>
+                        <label for="MemeberID">MemberID</label>
+                        <input type="text" name="ProjectID" id="MemberID">
+                    
+                   <div class="Submit">
+                    <button onclick="onMemFormSubmit()">Submit</button>
+                   </div> 
+                    <span class="modal-close">X</span>
+                </div>
+            </div>
+            <div class="table_selection">
+                <table class="List" id="MembersList">
+                      <thead>
+                             <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Last Name</th>
+                                <th>email</th>
+                                <th>Number</th>
+                                <th>Action</th>
+                             </tr>
+                      </thead>
+                       <tbody>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  <script src="Projects.js">
+  </script>
+</body>
+</html>
+    </div>
+  <script>
+
+  </script>
+</body>
+</html>
